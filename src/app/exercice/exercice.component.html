@@ -1,0 +1,22 @@
+<div class="row my-3">
+    <div class="col-12 col-md-8 offset-md-2 bg-dark text-white p-3 rounded">
+        <h5 class="display-5 text-muted">Exercice Services</h5>
+        <hr>
+        <div class="row row-cols-2 g-2">
+            <div class="col">
+                <div class="p-3">
+                    <h6 class="text-success">ACTIFS</h6>
+                    <hr class="text-success">
+                    <app-exercice-active *ngFor="let client of activeClients" [id]="client.id" (switchToInactive)="handleSwitchStatus($event)"></app-exercice-active>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-3">
+                    <h6 class="text-warning">INACTIFS</h6>
+                    <hr class="text-warning">
+                    <app-exercice-inactive *ngFor="let client of inactiveClients" [id]="client.id" (switchToInactive)="handleSwitchStatus($event)"></app-exercice-inactive>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

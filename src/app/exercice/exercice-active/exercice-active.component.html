@@ -1,0 +1,12 @@
+<div class="row my-2 border border-success p-3 bg-dark text-success">
+    <div class="col-auto border-end border-success text-end">
+        <b> {{ client.id }} </b>
+    </div>
+    <div class="col">
+        <h6> {{client.name }} </h6>
+        <p>Service <b> {{ client.service }} </b></p>
+    </div>
+    <div class="col text-end">
+        <button class="btn btn-outline-success" (click)="onSwitchActivity()">SWITCH</button>
+    </div>
+</div>
